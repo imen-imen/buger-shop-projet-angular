@@ -1,0 +1,144 @@
+.main-product {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.product-image-container {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  margin-left: 20px;
+}
+
+.main-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.product-info {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.product-info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f0a500;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #f0a500;
+}
+
+.actions button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #f0a500;
+  color: #1c1c1c;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.actions button:hover {
+  background-color: #ffcc00;
+}
+
+
+
+.suggestions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 30px;
+}
+
+.suggestion-card {
+  background-color: #2a2a2a;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.suggestion-card:hover {
+  transform: scale(1.03);
+}
+
+.suggestion-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.suggestion-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.suggestion-card .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #f0a500;
+}
+
+.suggestion-card button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #f0a500;
+  color: #1c1c1c;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.suggestion-card button:hover {
+  background-color: #ffcc00;
+}
+
+.disabled-btn {
+  background-color: #999 !important;
+  color: #333 !important;
+  cursor: not-allowed !important;
+}
+
+/* Bouton désactivé dans toutes les sections */
+button:disabled,
+.disabled-btn {
+  background-color: #999 !important;
+  color: #333 !important;
+  cursor: not-allowed !important;
+  opacity: 0.8;
+  box-shadow: none !important;
+  pointer-events: none;
+}
+button:disabled:hover {
+  background-color: #999 !important;
+}
+

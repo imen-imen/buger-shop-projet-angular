@@ -1,0 +1,58 @@
+<div class="container mt-5 text-white">
+  <h2 class="mb-4">🛒 Votre panier</h2>
+
+  <a routerLink="/accueil" class="btn btn-outline-light mb-4">← Retour à l'accueil</a>
+
+  @if (cartItems.length === 0 && errorItems.length === 0) {
+    <div class="alert alert-info text-center">
+      Votre panier est vide 😢
+    </div>
+  }
+
+  @if (cartItems.length > 0) {
+    <div class="row">
+      <!-- Liste des produits -->
+      <div class="col-md-8">
+        <ul class="list-group">
+          @for (item of cartItems; track item.id) {
+            <li class="list-group-item bg-dark text-white d-flex justify-content-between align-items-center">
+              <div class="d-flex align-items-center">
+                <img [src]="getImageUrl(item)" alt="{{ item.name }}" class="rounded" style="width: 80px; height: 80px; object-fit: cover; margin-right: 15px;" />
+                <div>
+                  <h5 class="mb-1">{{ item.name }}</h5>
+                  <small>{{ item.price | currency:'EUR' }}</small>
+                </div>
+              </div>
+              <button class="btn btn-sm btn-danger" (click)="remove(item.id)">Supprimer</button>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <!-- Récapitulatif -->
+      <div class="col-md-4">
+        <div class="card bg-secondary text-white p-3">
+          <h5 class="mb-3">Récapitulatif</h5>
+          <p>Total : <strong>{{ total | currency:'EUR' }}</strong></p>
+
+          @if (canOrder()) {
+            <button class="btn btn-success w-100">Commander</button>
+          } @else {
+            <span class="text-warning">Connectez-vous pour commander</span>
+          }
+        </div>
+      </div>
+    </div>
+  }
+
+  @if (errorItems.length > 0) {
+    <div class="alert alert-warning mt-4">
+      Certains produits ne sont plus disponibles :
+      <ul>
+        @for (id of errorItems; track id) {
+          <li>Produit ID : {{ id }}</li>
+        }
+      </ul>
+    </div>
+  }
+</div>

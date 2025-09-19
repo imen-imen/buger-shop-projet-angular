@@ -1,0 +1,28 @@
+<h2>Bienvenue {{ userName }} 👋</h2>
+
+@if (isLoading) {
+  <p>Chargement des commandes...</p>
+}
+
+@else if (orders.length > 0) {
+  <div class="order-history">
+    @for (order of orders; track order.date) {
+      <div class="order-card">
+        <h3>Commande du {{ order.date }}</h3>
+        <ul>
+         @for (item of order.items; track item.name) {
+            <li>
+              <img [src]="getImageUrl(item.imageUrl)" alt="{{ item.name }}" />
+              <span>{{ item.name }}</span>
+              <span>{{ item.price | currency:'EUR' }}</span>
+            </li>
+          }
+        </ul>
+      </div>
+    }
+  </div>
+}
+
+@else {
+  <p>Aucune commande enregistrée.</p>
+}

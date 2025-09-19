@@ -1,0 +1,12 @@
+<div class="login-wrapper">
+  <h2 class="login-title">Je me Connecte</h2>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <label for="email" class="form-label">E-mail</label>
+    <input type="email" id="email" formControlName="email" placeholder="exemple@mail.com" />
+
+    <label for="password" class="form-label">Mot de passe</label>
+    <input type="password" id="password" formControlName="password" placeholder="••••••••" />
+
+    <button type="submit" class="btn-orange">Connexion</button>
+  </form>
+</div>

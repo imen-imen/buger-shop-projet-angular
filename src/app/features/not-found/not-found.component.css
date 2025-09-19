@@ -1,0 +1,62 @@
+/* Conteneur principal */
+.not-found-wrapper {
+  background-color: #121212;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Header avec logo et boutons */
+.not-found-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Boutons en haut à droite */
+.header-buttons a {
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.btn-dark {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  border: 1px solid #444;
+}
+
+.btn-orange {
+  background-color: #f89a2f;
+  color: #121212;
+  border: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #ffa94d;
+}
+
+/* Contenu central */
+.not-found-content {
+  text-align: center;
+  margin-top: 10vh;
+}
+
+.not-found-title {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,55 @@
+.login-wrapper {
+  background-color: #121212;
+  color: #ffffff;
+  padding: 3rem;
+  max-width: 500px;
+  margin: 5rem auto;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(255, 153, 0, 0.2);
+}
+
+.login-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-label {
+  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+input[type="email"],
+input[type="password"] {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  border: 1px solid #444;
+  padding: 0.75rem;
+  border-radius: 4px;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+input::placeholder {
+  color: #aaaaaa;
+}
+
+.btn-orange {
+  background-color: #f89a2f;
+  color: #121212;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-weight: bold;
+  width: 100%;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-orange:hover {
+  background-color: #ffa94d;
+}
